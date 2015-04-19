@@ -59,6 +59,12 @@ static volatile os_timer_t kmp_request_send_timer;
 
 uint16 counter = 0;
 
+struct rtc_user_data {
+	uint32_t flag;
+	uint32_t pad[3];
+};
+struct rtc_user_data boot_status; 
+
 ICACHE_FLASH_ATTR void config_mode_func(os_event_t *events) {
     struct softap_config ap_conf;
 	
@@ -143,6 +149,9 @@ ICACHE_FLASH_ATTR void mqttDisconnectedCb(uint32_t *args) {
 ICACHE_FLASH_ATTR void mqttPublishedCb(uint32_t *args) {
 	MQTT_Client* client = (MQTT_Client*)args;
 	INFO("MQTT: Published\r\n");
+	boot_status.flag = 1;
+	system_rtc_mem_write(64, &boot_status, sizeof(struct rtc_user_data));
+	system_deep_sleep(1000000);
 }
 
 ICACHE_FLASH_ATTR void mqttDataCb(uint32_t *args, const char* topic, uint32_t topic_len, const char *data, uint32_t data_len) {
@@ -164,33 +173,44 @@ ICACHE_FLASH_ATTR void mqttDataCb(uint32_t *args, const char* topic, uint32_t to
 }
 
 ICACHE_FLASH_ATTR void user_init(void) {
-	// wait 10 seconds before starting wifi and let the meter boot
-	os_delay_us(10000000);
-	
-	// start kmp_request
-	kmp_request_init();
-
 	uart_init(BIT_RATE_1200, BIT_RATE_1200);
 	os_printf("SDK version:%s\n\r", system_get_sdk_version());
 	os_printf("Software version: %s\n\r", VERSION);
+
+	// start kmp_request
+	kmp_request_init();
+
+	system_rtc_mem_read(64, &boot_status, sizeof(struct rtc_user_data));
+	if (boot_status.flag) {
+		// wake up from sleep
+		// wait 1 second and start sampling
+		os_printf("wake up from sleep...\n\r");
+		os_timer_disarm(&sample_mode_timer);
+		os_timer_setfn(&sample_mode_timer, (os_timer_func_t *)sample_mode_timer_func, NULL);
+		os_timer_arm(&sample_mode_timer, 1000, 0);
+	}
+	else {
+		// wait 10 seconds before starting wifi and let the meter boot
+		os_delay_us(10000000);
 	
-	// wait 0.2 seconds
-	// and send serial number request
-	os_timer_disarm(&kmp_request_send_timer);
-	os_timer_setfn(&kmp_request_send_timer, (os_timer_func_t *)kmp_request_send_timer_func, NULL);
-	os_timer_arm(&kmp_request_send_timer, 200, 0);
+		// wait 0.2 seconds
+		// and send serial number request
+		os_timer_disarm(&kmp_request_send_timer);
+		os_timer_setfn(&kmp_request_send_timer, (os_timer_func_t *)kmp_request_send_timer_func, NULL);
+		os_timer_arm(&kmp_request_send_timer, 200, 0);
 		
-	// wait for serial number
-	// and start ap mode in a task wrapped in timer otherwise ssid cant be connected to
-	os_timer_disarm(&config_mode_timer);
-	os_timer_setfn(&config_mode_timer, (os_timer_func_t *)config_mode_timer_func, NULL);
-	os_timer_arm(&config_mode_timer, 6000, 0);
+		// wait for serial number
+		// and start ap mode in a task wrapped in timer otherwise ssid cant be connected to
+		os_timer_disarm(&config_mode_timer);
+		os_timer_setfn(&config_mode_timer, (os_timer_func_t *)config_mode_timer_func, NULL);
+		os_timer_arm(&config_mode_timer, 6000, 0);
 		
-	// wait for 60 seconds
-	// and go to station mode
-	os_timer_disarm(&sample_mode_timer);
-	os_timer_setfn(&sample_mode_timer, (os_timer_func_t *)sample_mode_timer_func, NULL);
-	os_timer_arm(&sample_mode_timer, 60000, 0);
+		// wait for 60 seconds
+		// and go to station mode
+		os_timer_disarm(&sample_mode_timer);
+		os_timer_setfn(&sample_mode_timer, (os_timer_func_t *)sample_mode_timer_func, NULL);
+		os_timer_arm(&sample_mode_timer, 60000, 0);
 	
+	}
 	INFO("\r\nSystem started ...\r\n");
 }
