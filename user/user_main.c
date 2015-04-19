@@ -151,7 +151,7 @@ ICACHE_FLASH_ATTR void mqttPublishedCb(uint32_t *args) {
 	INFO("MQTT: Published\r\n");
 	boot_status.flag = 1;
 	system_rtc_mem_write(64, &boot_status, sizeof(struct rtc_user_data));
-	system_deep_sleep(1000000);
+	system_deep_sleep(10000000);		// sleep for 10 seconds
 }
 
 ICACHE_FLASH_ATTR void mqttDataCb(uint32_t *args, const char* topic, uint32_t topic_len, const char *data, uint32_t data_len) {
