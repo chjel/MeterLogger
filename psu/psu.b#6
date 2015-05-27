@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="dots" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="mm"/>
+<grid distance="0.05" unitdist="inch" unit="mil" style="dots" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -395,22 +395,31 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="85-265VAC" pad="1"/>
 <contactref element="L" pad="1"/>
-<wire x1="20.32" y1="5.08" x2="20.28" y2="10.26" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="5.08" x2="20.32" y2="10.22" width="2.54" layer="16"/>
+<wire x1="20.32" y1="10.22" x2="20.28" y2="10.26" width="2.54" layer="16"/>
 </signal>
 <signal name="N$2">
 <contactref element="85-265VAC" pad="2"/>
 <contactref element="N" pad="1"/>
-<wire x1="15.3" y1="5.08" x2="15.24" y2="10.26" width="0" layer="19" extent="1-1"/>
+<wire x1="15.3" y1="5.08" x2="15.3" y2="10.2" width="2.54" layer="16"/>
+<wire x1="15.3" y1="10.2" x2="15.24" y2="10.26" width="2.54" layer="16"/>
 </signal>
 <signal name="N$3">
 <contactref element="JP2" pad="1"/>
 <contactref element="3.3V" pad="1"/>
-<wire x1="2.54" y1="57.15" x2="12.72" y2="57.76" width="0" layer="19" extent="1-1"/>
+<wire x1="12.72" y1="57.76" x2="12.72" y2="60.94" width="2.54" layer="16"/>
+<wire x1="12.72" y1="60.94" x2="11.43" y2="62.23" width="2.54" layer="16"/>
+<wire x1="11.43" y1="62.23" x2="3.81" y2="62.23" width="2.54" layer="16"/>
+<wire x1="3.81" y1="62.23" x2="2.54" y2="60.96" width="2.54" layer="16"/>
+<wire x1="2.54" y1="60.96" x2="2.54" y2="57.15" width="2.54" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="JP2" pad="2"/>
 <contactref element="GND" pad="1"/>
-<wire x1="2.54" y1="52.13" x2="22.8" y2="57.76" width="0" layer="19" extent="1-1"/>
+<wire x1="22.8" y1="57.76" x2="22.8" y2="54.55" width="2.54" layer="16"/>
+<wire x1="22.8" y1="54.55" x2="20.32" y2="52.07" width="2.54" layer="16"/>
+<wire x1="20.32" y1="52.07" x2="2.6" y2="52.07" width="2.54" layer="16"/>
+<wire x1="2.6" y1="52.07" x2="2.54" y2="52.13" width="2.54" layer="16"/>
 </signal>
 </signals>
 </board>
