@@ -148,12 +148,13 @@
 <text x="16.66875" y="29.05125" size="1.016" layer="25" rot="R90" align="center-right">RxD</text>
 <text x="7.77875" y="18.415" size="1.27" layer="25" ratio="10" rot="R270">ESP8266
 ESP-07</text>
-<text x="1.27" y="1.27" size="1.016" layer="25" rot="R180" align="center-right">Kamstrup-WiFi+Power v.1.1.1</text>
+<text x="26.035" y="80.16875" size="1.016" layer="25" ratio="10" rot="R180">Kamstrup-WiFi+Power
+v.1.1.1</text>
 <text x="26.82875" y="29.05125" size="1.016" layer="25" rot="R90" align="center-right">GND</text>
 <text x="33.655" y="67.945" size="1.016" layer="25" align="center-right">AC IN</text>
 <text x="8.73125" y="71.91375" size="1.016" layer="25" align="center-left">AC OUT 1</text>
 <text x="8.73125" y="62.23" size="1.016" layer="25" align="center-left">AC OUT 2</text>
-<rectangle x1="0.9525" y1="15.875" x2="7.112" y2="30.1625" layer="25"/>
+<rectangle x1="9.2075" y1="73.81875" x2="26.3525" y2="76.99375" layer="25"/>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">

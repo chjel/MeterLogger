@@ -1733,7 +1733,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="17.62125" y="66.3575" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="C2" library="rcl" package="C1206" value="10nF" x="12.54125" y="63.34125" smashed="yes" rot="MR270">
-<attribute name="NAME" x="14.2875" y="60.16625" size="1.27" layer="26" rot="MR270"/>
+<attribute name="NAME" x="13.97" y="60.96" size="1.27" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="12.54125" y="60.16625" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="JP3" library="SparkFun-Connectors" package="SCREWTERMINAL-5MM-2" value="AC OUT 2" x="4.60375" y="62.70625" smashed="yes" rot="R90"/>
