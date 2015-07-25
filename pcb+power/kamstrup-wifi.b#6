@@ -1457,10 +1457,10 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <packages>
 <package name="SOT428">
 <description>&lt;b&gt;SOT-428&lt;/b&gt;</description>
-<wire x1="3.2766" y1="1.651" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
+<wire x1="3.2766" y1="5.461" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
 <wire x1="3.2766" y1="-1.651" x2="-3.2766" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="1.651" x2="3.2766" y2="1.651" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="5.461" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="5.461" x2="3.2766" y2="5.461" width="0.2032" layer="21"/>
 <smd name="1" x="-2.3" y="-3.0988" dx="1.6" dy="3" layer="1"/>
 <smd name="2" x="0" y="-3.0988" dx="1.6" dy="3" layer="1"/>
 <smd name="3" x="2.3" y="-3.0988" dx="1.6" dy="3" layer="1"/>
@@ -2069,14 +2069,6 @@ design rules under a new name.</description>
 <approved hash="1,20,a0d267f267e0a0c0"/>
 <approved hash="18,29,7e6e2188cc0dbdd4"/>
 <approved hash="18,29,a366872ec5a22410"/>
-<approved hash="18,29,1adcfb3d3b47daa6"/>
-<approved hash="18,29,46aa274be74d86ac"/>
-<approved hash="18,29,82b06351a35442b5"/>
-<approved hash="18,29,ceb9af586f620e83"/>
-<approved hash="18,29,0a87eb662b68ca89"/>
-<approved hash="18,29,368d176cd776f697"/>
-<approved hash="18,29,729b537a937cb29d"/>
-<approved hash="18,29,be609f815f8b7e6a"/>
 <approved hash="18,29,68fc895d4927a886"/>
 <approved hash="18,29,348a552b952df48c"/>
 <approved hash="18,29,f0901131d1343095"/>
@@ -2085,6 +2077,14 @@ design rules under a new name.</description>
 <approved hash="18,29,44ad650ca51684b7"/>
 <approved hash="18,29,00bb211ae11cc0bd"/>
 <approved hash="18,29,cc40ede12deb0c4a"/>
+<approved hash="18,29,1adcfb3d3b47daa6"/>
+<approved hash="18,29,46aa274be74d86ac"/>
+<approved hash="18,29,82b06351a35442b5"/>
+<approved hash="18,29,ceb9af586f620e83"/>
+<approved hash="18,29,0a87eb662b68ca89"/>
+<approved hash="18,29,368d176cd776f697"/>
+<approved hash="18,29,729b537a937cb29d"/>
+<approved hash="18,29,be609f815f8b7e6a"/>
 <approved hash="18,29,0565b3c8f30c9f10"/>
 <approved hash="18,29,063f03ad03e60674"/>
 <approved hash="18,29,e190ac9f507b6e47"/>
@@ -2095,7 +2095,6 @@ design rules under a new name.</description>
 <approved hash="18,29,4ab7ddcffff85b48"/>
 <approved hash="18,29,19e008d3b96e34d1"/>
 <approved hash="18,29,641c1008e67c4a77"/>
-<approved hash="18,30,7bd902db02a37ba1"/>
 <approved hash="18,30,c8314842fca87ee9"/>
 <approved hash="18,30,d0e52de72dfcd0fe"/>
 <approved hash="18,30,1bf062f2628b1b89"/>
@@ -2110,7 +2109,6 @@ design rules under a new name.</description>
 <approved hash="18,30,ca1e4b084b25ca33"/>
 <approved hash="18,30,c2b511efc23f1147"/>
 <approved hash="18,30,f14841b28c8838a0"/>
-<approved hash="18,30,74b009b2095a7458"/>
 <approved hash="18,30,c99c149e1497c995"/>
 <approved hash="18,30,1497699569821480"/>
 <approved hash="18,30,5f83ae81ae795f7b"/>
