@@ -149,7 +149,7 @@
 <text x="7.77875" y="18.415" size="1.27" layer="25" ratio="10" rot="R270">ESP8266
 ESP-07</text>
 <text x="35.2425" y="66.9925" size="1.016" layer="25" ratio="15" rot="R180">Kamstrup-WiFi+Power
-v.1.1.4</text>
+v.1.1.5</text>
 <text x="26.82875" y="29.05125" size="1.016" layer="25" rot="R90" align="center-right">GND</text>
 <text x="22.06625" y="78.4225" size="1.27" layer="25" ratio="20" rot="R90" align="center-right">AC IN</text>
 <text x="13.97" y="71.12" size="1.27" layer="25" ratio="20" rot="R90" align="center-left">AC OUT 1</text>
