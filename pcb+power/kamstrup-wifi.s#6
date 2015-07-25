@@ -7886,7 +7886,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
 <part name="U$3" library="ESP8266" deviceset="ESP8266-03" device=""/>
 <part name="T2" library="SparkFun (old)" deviceset="TRIAC" device="SMD" value="BT137S-600D"/>
-<part name="OK2" library="optocoupler" deviceset="MOC30*" device="S" technology="43"/>
+<part name="OK2" library="optocoupler" deviceset="MOC30*" device="S" technology="43" value="MOC3063S"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R0805" value="120"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="330"/>
@@ -7898,7 +7898,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C2" library="rcl" deviceset="C-EU" device="C1206" value="10nF"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="5MM" value="AC OUT 2"/>
 <part name="T1" library="SparkFun (old)" deviceset="TRIAC" device="SMD" value="BT137S-600D"/>
-<part name="OK1" library="optocoupler" deviceset="MOC30*" device="S" technology="43"/>
+<part name="OK1" library="optocoupler" deviceset="MOC30*" device="S" technology="43" value="MOC3063S"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="120"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="330"/>
